@@ -4,10 +4,16 @@ from django.shortcuts import render
 
 # Create your views here.
 
+# rooms = [
+#     {"id": 1, "name": "Let's Learn Python"},
+#     {"id": 2, "name": "Let's Learn Rust"},
+#     {"id": 3, "name": "Let's Go"},
+# ]
+
 
 def home(request):
-    return render(request, "home.html")
+    return render(request, "base/home.html")
 
 
-def room(request):
-    return render(request, "room.html")
+def room(request, pk):
+    return render(request, "base/room.html")
